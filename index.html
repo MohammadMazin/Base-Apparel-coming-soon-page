@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="func.js"></script>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    
+    .container{
+      width:100%;
+      background-image: linear-gradient(135deg, hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+      position: relative;
+      max-width: 1400px;
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+   
+
+    .flexRow{
+      display: flex;
+      flex-direction: row;
+      
+    }
+
+  
+    .heroImgMobile{
+      display: none;
+    }
+
+    .heroImgDesktop{
+      margin-left: auto;
+      z-index: 2;
+    }
+
+    .left{
+      max-width: 450px;
+      margin: 5rem auto;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bgImg{
+      position:absolute; 
+    }
+
+    #firstTitle{
+      font-size: 5rem;
+      font-weight: 300;
+      letter-spacing: 15px;
+      margin-top: 8rem;
+      color: hsl(0, 36%, 70%);
+    }
+
+    #secondTitle{
+      font-size: 5rem;
+      
+      letter-spacing: 15px;
+      color: hsl(0, 6%, 24%);
+    }
+
+    .para{
+      font-size: 16px;
+      margin-top: 1rem;
+      line-height: 30px;
+      color:hsl(0, 36%, 70%);
+    }
+
+    #email{
+      
+      width:99%;
+      display: block;
+      margin: 2rem 0px;
+      border-radius: 50px;
+      background-color: none;
+      padding: 1.2rem 0px;
+      font-size: 1.2rem;
+      background: none;
+      border: 1px solid hsl(0, 36%, 70%);
+    }
+
+    #email:focus{
+      outline:none;
+    }
+
+    #email::placeholder{
+      color: hsl(0, 36%, 70%);
+      padding-left: 8px;
+    }
+
+    #emailForm{
+      position:relative;
+      
+    }
+
+    #submit{
+      position:absolute;
+      right: 0px;
+      top: 0px;
+      border: none;
+     
+      border-radius: 50px;
+      height:100%;
+      width:100px;
+      color: white;
+      font-size: 2rem;
+      background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      font-weight: 400;
+    }
+
+    #submit:hover{
+      cursor: pointer;
+    }
+
+    .error{
+      display: none;
+      text-align: center;
+
+    }
+
+    @media only screen and (max-width: 376px){
+      .container{
+        max-width: 375px;
+        overflow: hidden;
+      }
+
+      .info{
+        padding: 1rem 0px 0px 0px;
+      }
+
+      .heroImgDesktop{
+        display: none;
+      }
+
+      .heroImgMobile{
+        margin-top: 20px;
+        display: block;
+      }
+
+      /* .welcome{
+        text-align: center;
+      } */
+      #firstTitle{
+        font-size: 3rem;
+      }
+
+      #secondTitle{
+        font-size: 3rem;
+      }
+
+      .para{
+        font-size: 14px;
+        max-width: 35ch;
+        margin: 10px auto;
+      }
+
+
+       .welcome{
+         text-align: center;
+       }
+
+       #logo{
+         padding-left: 1rem;
+       }
+
+       #emailForm{
+         width:80%;
+         margin: 10px auto;
+       }
+
+       #submit{
+         width:80px
+       }
+
+       .left{
+         padding: 0px;
+       }
+
+      
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <img src="images/bg-pattern-desktop.svg" alt="" class="bgImg">
+
+  <div class="info flexRow">
+    <div class="left">
+      
+      <img src="images/logo.svg" alt="" id="logo">
+      <img src="images/hero-mobile.jpg" alt="" class="heroImgMobile">
+      <div class="welcome">
+      <h1 id="firstTitle">WE'RE</h1>
+      <h1 id="secondTitle">COMING<br>SOON</h1>
+      <p class="para"> Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+        <form id="emailForm">
+          <input type="text" name="email" id="email" placeholder="Email Address">
+          <input type="button" value=">" id="submit">
+        </form>
+
+        <div class="error flexRow">
+          <img src="images/icon-error.svg" alt="">
+          <p>Error! Incorrect Email Format</p>
+        </div>
+
+    </div>
+    </div>
+    
+    <img src="images/hero-desktop.jpg" alt="" class="heroImgDesktop">
+  </div>
+  
+
+ 
+ 
+</div>
+
+  
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
